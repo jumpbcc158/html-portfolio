@@ -13,55 +13,57 @@
 
     <script src="https://cdn.jsdelivr.net/npm/client-oauth2@4.3.3/src/client-oauth2.min.js"></script>
     <script>
-        // OAuth 1.0a configuration
-        const oauth = OAuth({
-            consumer: {
-                key: 'vfyhmr1ak47l934a3y81ktor91yrazif',
-                secret: 'r77z7ywugo6c08qyrg1eag49m0nz6obn'
-            },
-            signature_method: 'HMAC-SHA256',
-            version: '1.0',
-            addEmptyParamsToSign: false,
-            addParamsToHeader: true,
+        document.addEventListener("DOMContentLoaded", function() {
+            // OAuth 1.0a configuration
+            const oauth = OAuth({
+                consumer: {
+                    key: 'vfyhmr1ak47l934a3y81ktor91yrazif',
+                    secret: 'r77z7ywugo6c08qyrg1eag49m0nz6obn'
+                },
+                signature_method: 'HMAC-SHA256',
+                version: '1.0',
+                addEmptyParamsToSign: false,
+                addParamsToHeader: true,
+            });
+
+            function makeApiRequest() {
+                const searchValue = document.getElementById('searchValue').value;
+
+                const request = {
+                    method: 'GET',
+                    url: `https://www.cpschaps.com/rest/V1/orders/${searchValue}?fields=billing_address,customer_firstname,customer_lastname`,
+                };
+
+                oauth.setToken({
+                    key: '9dkk6mnw8ipnbsmhrobahblh8m4oz533',
+                    secret: '9ljz2evb9rti4bym3l5m0auav5py256e'
+                });
+
+                oauth.authorize(request);
+
+                fetch(request.url, {
+                    method: request.method,
+                    headers: request.headers
+                })
+                .then(response => {
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error('API request failed. Status: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('API response:', data);
+                    const responseElement = document.getElementById('response');
+                    responseElement.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('API request error:', error);
+                    const responseElement = document.getElementById('response');
+                    responseElement.textContent = 'API request failed: ' + error.message;
+                });
+            }
         });
-
-        function makeApiRequest() {
-            const searchValue = document.getElementById('searchValue').value;
-
-            const request = {
-                method: 'GET',
-                url: `https://www.cpschaps.com/rest/V1/orders/${searchValue}?fields=billing_address,customer_firstname,customer_lastname`,
-            };
-
-            oauth.setToken({
-                key: '9dkk6mnw8ipnbsmhrobahblh8m4oz533',
-                secret: '9ljz2evb9rti4bym3l5m0auav5py256e'
-            });
-
-            oauth.authorize(request);
-
-            fetch(request.url, {
-                method: request.method,
-                headers: request.headers
-            })
-            .then(response => {
-                console.log('Response status:', response.status);
-                if (!response.ok) {
-                    throw new Error('API request failed. Status: ' + response.status);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('API response:', data);
-                const responseElement = document.getElementById('response');
-                responseElement.textContent = JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                console.error('API request error:', error);
-                const responseElement = document.getElementById('response');
-                responseElement.textContent = 'API request failed: ' + error.message;
-            });
-        }
     </script>
 </body>
 </html>
