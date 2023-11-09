@@ -1,0 +1,892 @@
+html{
+    padding-bottom:0px !Important;
+  }
+  body {
+      margin: 0;
+  }
+  body .nDlg,.nDlg input,.nDlg textarea,.nDlg select,.nDlg button {
+      font-family: Lato,Segoe UI, Tahoma, Arial, Verdana!important;
+  }
+  
+  
+  
+      .nDlg.show a:focus {
+          outline: thin dotted;
+      }
+  
+      /**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */
+  
+      .nDlg.show a:active,
+      .nDlg.show a:hover {
+          outline: 0;
+      }
+  
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  
+  /**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  .nDlg.show h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+  }
+  
+  /**
+   * Address styling not present in IE 8/9, Safari 5, and Chrome.
+   */
+  
+  .nDlg.show abbr[title] {
+      border-bottom: 1px dotted;
+  }
+  
+  /**
+   * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  .nDlg.show b,
+  .nDlg.show strong {
+      font-weight: bold;
+  }
+  
+  /**
+   * Address styling not present in Safari 5 and Chrome.
+   */
+  
+  .nDlg.show dfn {
+      font-style: italic;
+  }
+  
+  /**
+   * Address differences between Firefox and other browsers.
+   */
+  
+  .nDlg.show hr {
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      height: 0;
+  }
+  
+  /**
+   * Address styling not present in IE 8/9.
+   */
+  
+  .nDlg.show mark {
+      background: #ff0;
+      color: #000;
+  }
+  
+  /**
+   * Correct font family set oddly in Safari 5 and Chrome.
+   */
+  
+  .nDlg.show code,
+  .nDlg.show kbd,
+  .nDlg.show pre,
+  .nDlg.show samp {
+      font-size: 1em;
+  }
+  
+  /**
+   * Improve readability of pre-formatted text in all browsers.
+   */
+  
+  .nDlg.show pre {
+      white-space: pre-wrap;
+  }
+  
+  /**
+   * Set consistent quote types.
+   */
+  
+  .nDlg.show q {
+      quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+  
+  /**
+   * Address inconsistent and variable font size in all browsers.
+   */
+  
+  .nDlg.show small {
+      font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+  
+  .nDlg.show sub,
+  .nDlg.show sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+  }
+  
+  .nDlg.show sup {
+      top: -0.5em;
+  }
+  
+  .nDlg.show sub {
+      bottom: -0.25em;
+  }
+  
+  /* ==========================================================================
+     Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove border when inside `a` element in IE 8/9.
+   */
+  
+  .nDlg.show img {
+      border: 0;
+  }
+  
+  /**
+   * Correct overflow displayed oddly in IE 9.
+   */
+  
+  .nDlg.show svg:not(:root) {
+      overflow: hidden;
+  }
+  
+  /* ==========================================================================
+     Figures
+     ========================================================================== */
+  
+  /**
+   * Address margin not present in IE 8/9 and Safari 5.
+   */
+  
+  .nDlg.show figure {
+      margin: 0;
+  }
+  
+  /* ==========================================================================
+     Forms
+     ========================================================================== */
+  
+  /**
+   * Define consistent border, margin, and padding.
+   */
+  
+  .nDlg.show fieldset {
+      border: 1px solid #c0c0c0;
+      margin: 0 2px;
+      padding: 0.35em 0.625em 0.75em;
+  }
+  
+  /**
+   * 1. Correct `color` not being inherited in IE 8/9.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+  
+  .nDlg.show legend {
+      border: 0; /* 1 */
+      padding: 0; /* 2 */
+  }
+  
+  /**
+   * 1. Correct font family not being inherited in all browsers.
+   * 2. Correct font size not being inherited in all browsers.
+   * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+   */
+  
+  
+  
+  /**
+   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+  
+  .nDlg.show button,
+  .nDlg.show input {
+      line-height: normal;
+  }
+  
+  /**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+   * Correct `select` style inheritance in Firefox 4+ and Opera.
+   */
+  
+  .nDlg.show button,
+  .nDlg.show select {
+      text-transform: none;
+  }
+  
+  /**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   * 3. Improve usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+  
+  .nDlg.show button,
+  html .nDlg.show input[type="button"], /* 1 */
+  .nDlg.show input[type="reset"],
+  .nDlg.show input[type="submit"] {
+      -webkit-appearance: button; /* 2 */
+      cursor: pointer; /* 3 */
+  }
+  
+      /**
+   * Re-set default cursor for disabled elements.
+   */
+  
+      .nDlg.show button[disabled],
+      html .nDlg.show input[disabled] {
+          cursor: default;
+      }
+  
+  /**
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   */
+  
+  .nDlg.show input[type="checkbox"],
+  .nDlg.show input[type="radio"] {
+      box-sizing: border-box; /* 1 */
+      padding: 0; /* 2 */
+  }
+  
+  /**
+   * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+   *    (include `-moz` to future-proof).
+   */
+  
+  .nDlg.show input[type="search"] {
+      -webkit-appearance: textfield; /* 1 */
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box; /* 2 */
+      box-sizing: content-box;
+  }
+  
+      /**
+   * Remove inner padding and search cancel button in Safari 5 and Chrome
+   * on OS X.
+   */
+  
+      .nDlg.show input[type="search"]::-webkit-search-cancel-button,
+      .nDlg.show input[type="search"]::-webkit-search-decoration {
+          -webkit-appearance: none;
+      }
+  
+  /**
+   * Remove inner padding and border in Firefox 4+.
+   */
+  
+  .nDlg.show button::-moz-focus-inner,
+  input::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+  }
+  
+  /**
+   * 1. Remove default vertical scrollbar in IE 8/9.
+   * 2. Improve readability and alignment in all browsers.
+   */
+  
+  .nDlg.show textarea {
+      overflow: auto; /* 1 */
+      vertical-align: top; /* 2 */
+  }
+  
+  /* ==========================================================================
+     Tables
+     ========================================================================== */
+  
+  /**
+   * Remove most spacing between table cells.
+   */
+  
+  .nDlg.show table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  
+  
+  .nDlg.show .field {
+      width: 100%;
+  }
+  
+      .nDlg.show .field button {
+           background-color: #333;
+      color: #fff;
+      border: 0px;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+        border-radius:5px;
+      }
+  
+  .nDlg.show .field button:hover {
+                   background-color: #fff;
+      border: 1px solid #333;
+      color: #333;
+  }
+  
+          .nDlg.show .field button:disabled {
+              background-color: #cccccc!important;
+              cursor: not-allowed;
+          }
+  
+      .nDlg.show .field input {
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #556a7d;
+          border: 0px none;
+          border: 1px solid #d7d7d7;
+        border-bottom-width: 1px !important;
+          border-radius: 2px 2px 2px 2px !important;
+          display: block;
+          width: 100%;
+          line-height: 25px;
+          text-indent: 5px;
+          height: 32px !important;
+          padding: 0px;
+          box-sizing: border-box;
+      }
+  
+  .nDlg.show .right {
+      float: right;
+  }
+  
+  .nDlg.show .left {
+      float: left;
+  }
+  
+  .modal-bg {
+      background-color: #000;
+      background-repeat: repeat-x repeat-y;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 20;
+      opacity: 0;
+  }
+  
+      .modal-bg.show {
+          opacity: .6;
+      }
+  
+      .modal-bg.hide, .nDlg {
+          opacity: 0;
+      }
+  
+          .nDlg .nClose i {
+              font-size: 10px!important;
+              display: block;
+              height: 14px;
+              width: 14px;
+              line-height: 15px;
+          }
+  
+  .nDlg.show .nDlgHeader {
+      cursor: move;
+      border-radius:8px;
+  }
+  
+  .nDlg.show .nDlgFooter{
+      width: 100% !Important;
+      display: block;
+  
+  }
+  
+  .nDlgHeader {
+      display: flex !important;
+      height: auto;
+    align-items:center;
+  }
+  
+  
+      .nDlgFooter a {
+          font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+      }
+  
+      .nDlgHeader .left, .nDlgHeader .right {
+          margin-top: 10px;
+      }
+  
+      /*.nDlgFooter .left, .nDlgFooter .right {
+          margin-top: 10px;
+      }*/
+  
+      .nDlgHeader .left {
+          margin-left: 10px;
+      }
+  
+      .nDlgHeader .right {
+          margin-right: 10px;
+      }
+  
+  .nDlg {
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+      outline: 0;
+      position: fixed;
+      transition: all .3s linear 0s;
+      z-index: 21;
+  }
+  
+      .nDlg.show {
+          opacity: 1 !important;
+      }
+  
+      .nDlg.hide {
+          opacity: 1 ;
+          top: 100%;
+      }
+  
+      .nDlg .nDlgHeader h2 {
+          font-size: 20px;
+          font-weight: 900;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.9;
+          letter-spacing: normal;
+          color: #384754;
+          margin-left: 10px;
+          margin-top: -2px;
+          float: left;
+      }
+  
+      .nDlg .nDlgHeader .nDlgTool {
+          float: right;
+          margin-right: 10px;
+          margin-top: 20px;
+      }
+  
+          .nDlg .nDlgHeader .nDlgTool i {
+              width: 16px;
+              height: 16px;
+              font-size: 1.4em;
+          }
+  
+      .nDlg .nClose:hover, nWordCloud {
+          background-color: #FFF;
+          color: #384754;
+          cursor: pointer;
+      }
+  
+  .nDlgBody {
+      width: 100%;
+      display: block;
+      float: left;
+      word-wrap: break-word;
+      font-size: 14px;
+      margin: auto;
+      font-style: normal;
+      font-stretch: normal;
+      color: #556a7d;
+      z-index: 2;
+      /*box-shadow: 0px -1px 10px rgba(0,0,0,.1);*/
+  }
+  
+  .nDlg.show .nMsg {
+      text-indent: 4px;
+      line-height: 28px;
+      color:#384754;
+      font-size: 14px;
+  }
+  
+  .nDlg.show .nDlgBody h2 {
+      margin: 0px;
+      padding: 0px;
+      height: 30px;
+      color:#384754;
+  }
+  
+  .nDlg.show .nDlgBody iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      position: relative;
+      z-index: 1;
+  }
+  
+  .nDlg.show .nDlgBody .center {
+      text-align: center;
+  }
+  
+  .nDlg.show .right.btn i {
+      font-size: 1.2em;
+      color:#a3b2bf;
+      float:right;
+      margin-top:-3px;
+  }
+  
+  .nDlg.show .right.btn:disabled {
+      cursor: not-allowed;
+  }
+  
+  .nDlg.show .btn {
+      cursor: pointer;
+      background-color: transparent;
+      border-style: none;
+      font-weight: 400 !important;
+      font-size: 16px;
+      font-style: normal;
+      position: relative;
+      margin-right: 30px;
+  }
+  
+  .nDlg.show .btn:hover:after{
+      width: 100%;
+  }
+  .nDlg.show .btn:after {
+      content: "";
+      border-bottom: solid 2px #000;
+      position: absolute;
+      left: 0px;
+      bottom: -2px;
+      transition: width .25s ease-in-out;
+      width: 0px;
+  }
+  
+  
+  .nDlg.show .right.btn, .left.btn {
+      line-height: 24px;
+      height: 24px;
+  }
+  
+      .nDlg.show .left.btn img {
+          height: 24px;
+          width: 24px;
+      }
+  .nDlg a {
+      text-decoration: none;
+  }
+      .nDlg a.btn:hover {
+          text-decoration:underline;
+      } 
+  
+   .bubble {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      height: 4em;
+      width: 12em !important;
+      text-align: center;
+      cursor: pointer;
+  }
+  
+   .bubble img {
+      width: 38%;
+      height: 42px;
+      cursor: pointer;
+      object-fit: contain;
+  }
+  .bubble_chat span.inner_text {
+      color: white;
+      width: 65%;
+      font-size: 12px;
+  }
+  
+  .bubble_chat {
+      display: flex;
+      align-items: center;
+      background: black;
+    border-radius:20px;
+  }
+  #chat-frame {
+      padding: 10px;
+      width:95% !important;
+      margin:auto;
+  }
+  .nDlg.show .btn:hover .menu {
+      display:block;
+  }
+  .nDlg.show .menu {
+      width: 100px;
+      position: absolute;
+      display:none;
+      margin-top:-5px;
+      margin-left:4px;
+      transition: all 0.4s ease-in-out 0.1s;
+      -webkit-transition: all 0.4s ease-in-out 0.1s;
+      z-index:55;
+  }
+      .nDlg.show .menu ul {
+      display: inline-block;
+      overflow: hidden;
+      list-style: none outside none;
+      margin: 0;    
+      padding: 0;
+      }
+  
+      .nDlg.show .menu li:first-child {
+          border-top: 1px solid #d7d7d7;
+      }
+      .nDlg.show .menu li span {
+          margin-left:2px;
+      } 
+      .nDlg.show .menu li i {
+          font-size:1em;
+          float:left;
+      }
+      .nDlg.show .menu li {
+          border: 1px solid #d7d7d7;
+          float: left;
+          height: 20px;
+          line-height: 20px;
+          border-top: 0 none;
+          width:80px;
+          color:#1b9cfc;
+          background-color:#fff;
+  
+      }
+      .nDlg.show .menu li:hover {
+          color:#fff;
+          background-color:#1b9cfc;
+      }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #a3b2bf;
+      opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #a3b2bf;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: #a3b2bf;
+  }
+  
+  
+  
+  
+  
+  /* new css */
+  .nDlg.show span.right.btn.close_chat {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding: 0px;
+        width: 45%;
+  }
+  .nDlg.show span.right.btn.close_chat:hover{
+    border:none;
+  }
+  .nDlg.show span.right.btn.close_chat img{
+    width:17%;
+  }
+  .nDlg.show span.right.btn:after{
+    border:none !important;
+  }
+  .nDlg.show h2.center,.center.Label{
+      display: none;
+  }
+  .nDlg.show .nDlgHeader {
+      background: black;
+    padding-bottom:10px;
+    height:auto !important;
+  }
+  .nDlg.show img.jp_logo {
+      width: 30%;
+        border-radius: 100%;
+      border: 1px solid white !important;
+  
+  }
+  .nDlg.show span#heading {
+      width: 45%;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    gap:10px;
+  }
+  
+  .nDlg.show form#sample input {
+      margin-bottom: 7px;
+  }
+  
+  .nDlg.show .select_lang {
+       width: 100%;
+       background: white;
+       padding: 7px !important;
+        radius:3px;
+   }
+   *:focus-visible {
+       outline: 0.2rem solid #0060df;
+       outline-offset: 0px;
+       box-shadow: 0 0 0 .3rem rgb(var(--color-background)),0 0 .5rem .4rem rgba(rgb(0 96 223),.3);
+       border-radius: 3px 3px 4px 4px !important;
+       border-bottom: 3px solid #0060df !important;
+   }
+   #thai, #eng {
+       padding: 0px;
+       height: 31px !important; 
+     border-radius:2px;
+   }
+  
+  .nDlg.show .field.select_box {
+      display: flex !important;
+        gap: 10px;
+      width: 70%;
+      margin: auto;
+      padding-bottom: 10px;
+  }
+   .nDlg.show .nDlgFooter a{
+     color:black;
+     padding-top:15px !important;
+     padding:0px;
+     display: flex !important;
+     justify-content: space-evenly;
+     
+   }
+  
+  .nDlg.show .nDlgFooter .right {
+  display:none;
+      text-align: end;
+  }
+  .nDlg.show .nDlgFooter .right a.btn:hover,.nDlg.show .nDlgFooter .left a.btn:hover{
+    text-decoration: none !important;
+    border:none !important;
+  }
+  
+  #site-scroll {
+      left: 20px;
+  }
+  .nDlg.show span.right.btn.close_chat:hover {
+      border: none;
+      text-decoration: none;
+  }
+  
+  .nDlg.show span.right.btn.close_chat:after{
+    border-bottom:none;
+  }
+  .nDlg.show .field.select_box button{
+      background: white;
+      color: black;
+      border: 1px solid black;  
+  }
+  .nDlg.show button.active-select {
+      background: black !important;
+      color: white !important;
+  }
+  .nDlg.show .nDlgFooter .right {
+      display: none;
+  }
+  .nDlg.show .nDlgFooter {
+      background: black !important;
+      position: absolute;
+      bottom: 0px;
+      width: 100% !important;
+    height:auto !important;
+  }
+  .nDlg.show .nDlgFooter a.btn {
+      color: white;
+  }
+  .nDlg.show .nDlgFooter .left{
+    float:none;
+  }
+  .nDlg.show span.agreed {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+  .nDlg.show .nDlgFooter a.btn {
+      color: white;
+      width: 100%;
+  }
+   .nDlg.show .nDlgFooter a.btn {
+      color: white;
+      width: 100%;
+      padding: 5px 25px;
+  }
+  .nDlg.show span.heading_left {
+      font-size: 13px !important;
+  }
+  .nDlg.show img.logo-text {
+      width: 60%;
+      display: none !important;
+  }
+   .nDlg.show .nDlgHeader{
+    display:flex !Important;
+        align-items: center;
+  }
+  .nDlg.show .nDlgFooter{
+    display:none !important;
+  }
+  .nDlg.show .field.checkbox_field {
+      display: flex;
+      align-items: center;
+  }
+  .nDlg.show input.terms_condition {
+      width: 5% !important;
+      margin-bottom: 0px !important;
+  }
+  .nDlg.show span.agreement {
+      font-size: 11px;
+      font-weight: 700;
+  }
+  
+  .nDlg.show .field.submit_button {
+      position: absolute;
+      bottom: 12px;
+      left: 18px;
+      width: 90%;
+      margin: auto;
+  }
+  span#heading {
+      display: flex;
+  }
+  a.privacy_link {
+      text-decoration: underline 1px !important;
+  }
+  select {
+      -webkit-appearance: menulist; /* This property may help in some cases */
+      appearance: menulist;
+  }
+  .nDlg.show .select_lang {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 3px;
+      border: 1px solid #dfdfdf;
+      border-radius: 2px;
+      margin-right: 2rem;
+      padding: 1rem;
+      padding-right: 2rem;
+  }
+  
+  @media(min-width:820px){
+    .nDlg.show.show {
+      width: 350px !important;
+  }
+  }
+  
+  
+  
+  @media(max-width:768px){
+    .nDlg.show {
+      right: 0px !important;
+      width: 80% !important;
+  }
+  }
