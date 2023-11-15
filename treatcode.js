@@ -1009,7 +1009,7 @@ function Dialog(option) {
 }
 var TLCONF_ALLOWED_DOMAINS = ["https://130519web1.saas.talismaonline.com",
     "localhost",
-    "https://lynaccs.myshopify.com/",];
+    "https://jumpbcc158.github.io/",];
 (function (w) {
     w.addEventListener("message", function (event) {
         //Security Check for Domain
